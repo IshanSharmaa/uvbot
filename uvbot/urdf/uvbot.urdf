@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="uvbot">
+  <link name="base_link">
+  </link>
+  <link
+    name="uvbot_model">
+    <inertial>
+      <origin
+        xyz="0.356819791808463 0.472810646535883 0.733318517438616"
+        rpy="0 0 0" />
+      <mass
+        value="4.04542838300826" />
+      <inertia
+        ixx="0.0230451531897933"
+        ixy="-2.03775238972793E-06"
+        ixz="-5.95551158310014E-06"
+        iyy="0.0219870313478458"
+        iyz="-2.80230441750725E-05"
+        izz="0.00940360350650076" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot/meshes/uvbot_model.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot/meshes/uvbot_model.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_to_bot" type="fixed">
+    <parent link="base_link"/>
+    <child link="uvbot_model"/>
+  </joint>
+</robot>
